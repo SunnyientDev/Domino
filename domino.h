@@ -1,11 +1,11 @@
 #ifndef DOMINO_H_INCLUDED
 #define DOMINO_H_INCLUDED
 
-class Domino { // Класс для создания списка
+class Domino {// Class for creating a list
 public:
-    int A;
-    int B;
-    Domino(); //Создаем пустой класс
-    Domino(int, int); // Конструктор Domino
+    int A;
+    int B;
+    Domino (); // Create an empty class
+    Domino (int, int); // Domino Constructor
 };
 #endif
