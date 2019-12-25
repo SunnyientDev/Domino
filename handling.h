@@ -5,16 +5,16 @@
 #include "domino.h"
 using namespace std;
 
-class Handling{ //Обращение
+class Handling {// Call
 private:
-     bool play;
-     stack <Domino> setup;
+      bool play;
+      stack <Domino> setup;
 
 public:
-    void SaveMove(int a, int b);
-    list <Domino> UndoMove(list<Domino>);
-    bool getPlay();
-    void setPlay(bool);
-    Domino getTop();
+     void SaveMove (int a, int b);
+     list <Domino> UndoMove (list <Domino>);
+     bool getPlay ();
+     void setPlay (bool);
+     Domino getTop ();
 };
-#endif 
+#endif
