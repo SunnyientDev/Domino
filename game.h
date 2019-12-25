@@ -1,4 +1,4 @@
-//Связывает всe из Domino.cpp
+// Binds everything from Domino.cpp
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
@@ -7,25 +7,25 @@
 #include "handling.h"
 using namespace std;
 
-class Game : public Handling {
+class Game: public Handling {
 public:
-    list<Domino> stol;
-    list<Domino> player1;
-    list<Domino> player2;
-    list<Domino> nobody; // украден для частного
+    list <Domino> stol;
+    list <Domino> player1;
+    list <Domino> player2;
+    list <Domino> nobody; // stolen for private
 
-    int Motion;
-    int X; // хранит начало вывода
-    int Y; // хранит конец вывода
-    int loop; // предотвращает петли, вызванные отсутствием доминошек у обоих игроков
+    int Motion;
+    int X; // stores the beginning of the output
+    int Y; // stores the end of the output
+    int loop; // prevents loops caused by the lack of dominoes in both players
 
-    void WriteDomino(); // Пишем все доминошки на боарде
-    void Lookfromthetable(Domino); // Возвращение на одно состояние назад
-    int AddDomino(list<Domino>); // Добавляет штрафные доминошки из листа «без человека», когда у игрока нет подходящих доминошек
-    void MakeDomino(); // Распределяет домино в начале новой игры
-    int CheckMotion(list<Domino>); // Проверяет, может ли игрок сделать ход
-    void WriteUserBlocks(list<Domino>); // Обновляет список блоков (доминошек) после добавления новой доминошки
-    list<Domino> MakeMove(char[], list<Domino>); // Проверяет, может ли текущий игрок сделать ход
-    void CountPoints(); // Определяет победителя в случае ничьей
+    void WriteDomino (); // We write all the dominoes on the board
+    void Lookfromthetable (Domino); // Go back one state
+    int AddDomino (list <Domino>); // Adds penalty dominoes from the “no man” sheet when a player does not have suitable dominoes
+    void MakeDomino (); // Distribute dominoes at the beginning of a new game
+    int CheckMotion (list <Domino>); // Checks if the player can make a move
+    void WriteUserBlocks (list <Domino>); // Updates the list of blocks (dominoes) after adding a new domino
+    list <Domino> MakeMove (char [], list <Domino>); // Checks if the current player can make a move
+    void CountPoints (); // Defines the winner in case of a tie
 };
-#endif 
+#endif
